@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="ZayneDev builds modern websites and web applications for businesses."
+>
+    <title>Frontend Practice-01</title>
+    <link rel="stylesheet" href="final.css">
+    
+    
+</head>
+<body>
+    
+             <!--Header-->
+    <header class="header">
+        <a href="#home" class="logo">ZayneDev</a>
+        <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul> 
+    </nav>
+
+    </header>         
+    
+    <!--Main-->
+    <main>
+            <!--Hero Section-->
+    <section class="hero-section" id="home">
+        <h1 id="hero">Building Modern Digital Experiences</h1>
+        <p>We create professional websites and web applications for modern businesses.</p>
+        <a href="#contact" class="get-started">Get Started</a> 
+        
+        <button id="dark-mode-btn">Dark Mode</button>
+    </section>
+
+    <!--Services Section-->
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services-container">
+
+            <article>
+                <h3>Web Development</h3>
+
+                <p>
+                    We build modern, responsive and professional websites
+                    for businesses and individuals.
+                </p>
+            </article>
+
+
+            <article>
+                <h3>UI/UX Design</h3>
+
+                <p>
+                    We create clean and user-friendly interfaces that provide
+                    excellent digital experiences.
+                </p>
+            </article>
+
+            <article>
+                <h3>Web Applications</h3>
+
+                <p>
+                    We develop powerful web applications designed to solve
+                    real-world business problems.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!--About Section-->
+    <section class="about-section" id="about">
+        <h2>About</h2>
+        <p>ZayneDev is a Web Applications and Software Development company focused on building modern digital solutions for businesses.</p>
+    </section>
+
+    <!--Technologies Section-->
+    <section class="technologies-section" id="technologies">
+        <h2>Technologies</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <!--Contact Section-->
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post" class="contact-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <label for="email">Enter your email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <label for="phone-number">Enter your phone number</label>
+            <input type="tel" id="phone-number" name="phone" autocomplete="tel" required>
+            <label for="message">Type your message</label>
+            <textarea name="message" id="message" rows="6" minlength="20" maxlength="500" placeholder="Enter your message"></textarea>
+
+            <fieldset>
+                <legend>Select Service</legend>
+                <input type="checkbox" id="web-development" name="services" value="Web Development">
+                <label for="web-development">Web Development</label>
+                <input type="checkbox" name="services" id="web-application" value="Web Application">
+                <label for="web-application">Web Application</label>
+                <input type="checkbox" name="services" id="ui-ux" value="UI/UX">
+                <label for="ui-ux">UI/UX</label>
+            </fieldset>
+
+             <label for="budget">Estimated Budget</label>
+
+                    <input
+                        type="number"
+                        id="budget"
+                        name="budget"
+                        min="100"
+                        max="100000"
+                        step="100"
+                        required
+                    >
+
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+                <input type="radio" name="contact-method" id="contact-phone" value="phone" required>
+                <label for="contact-phone">Phone</label>
+                <input type="radio" name="contact-method" id="contact-email" value="email" required>
+                <label for="contact-email">Email</label>
+            </fieldset>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    </main>
+
+    <!--Footer-->
+    <section class="footer">
+        <p>&copy; 2026 ZayneDev. All rights reserved.</p>
+    </section>
+    
+    <script>
+        const heroTittle = document.getElementById("hero");
+        heroTittle.textContent =" Welcome to ZayneDev!";
+
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.style.background = "green";
+
+        
+
+         const darkMode = document.querySelector("#dark-mode-btn");
+
+         darkMode.addEventListener("click", function(){
+            document.body.classList.toggle("dark-mode");
+         });
+
+         
+        
+    </script>
+</body>
+</html>

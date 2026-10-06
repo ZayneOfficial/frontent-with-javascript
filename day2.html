@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day-2-practice</title>
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+   <!---HEADER SECTION--> 
+   <header class="header">
+        <div class="logo-svg" style="width: 200px; height: 50px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="100%" height="100%">
+  <!-- Icon Symbol: Open Book with Accent -->
+  <g transform="translate(10, 15)">
+    <!-- Left Book Page -->
+    <path d="M 25 10 C 15 10 5 15 0 25 L 0 45 C 5 37 15 32 25 32 Z" fill="#1E3A8A"/>
+    <!-- Right Book Page -->
+    <path d="M 25 10 C 35 10 45 15 50 25 L 50 45 C 45 37 35 32 25 32 Z" fill="#1E3A8A"/>
+    <!-- Center Spine/Highlight Arrow -->
+    <path d="M 25 32 L 25 10 C 27 15 30 20 35 25 Z" fill="#F59E0B"/>
+    <circle cx="25" cy="5" r="3" fill="#F59E0B"/>
+  </g>
+
+  <!-- Typography: ZAYNETUTOR -->
+  <text x="75" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#1E3A8A" letter-spacing="0.5">
+    ZAYNE<tspan font-weight="400" fill="#F59E0B">TUTOR</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="77" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748B" letter-spacing="2">
+    EXCELLENCE IN LEARNING
+  </text>
+</svg>
+
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+   </header>
+
+   <!--HERO SECTION-->
+    <section class="hero-section" id="home">
+        <h1>
+            ZayneTutor
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto praesentium quasi earum rerum eveniet similique tenetur incidunt sapiente illo dolores.
+        </p>
+        <a href="#contact">Book A Session</a>
+    </section>
+
+    <!--ABOUT SECTION-->
+    <section class="About-section" id="about">
+        <h2>About ZayneTutor</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolorem alias praesentium fugit eius reprehenderit illum, dolore error perferendis quidem.</p>
+    </section>
+
+    <!--SERVICES-SECTION-->
+    <section id="Services">
+        <h2>Our Services</h2>
+        <div  class="services-section">
+            <article class="services-article">
+            <h3>One-On-One Sessions</h3>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="students learning">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, itaque.</p>
+        </article>
+        <article class="Services-article">
+            <h3>One-On-One Sessions</h3>
+            <img src="https://media.istockphoto.com/id/2226385991/photo/happy-group-of-students-studying-together-at-the-library.jpg?s=612x612&w=is&k=20&c=v4-JmzKhLKuc_2bCniD6WLDihY1ClFfGaWsHWzZFd2I=" alt="students learning">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, itaque.</p>
+        </article>
+        <article class="Services-article">
+            <h3>One-On-One Sessions</h3>
+            <img src="https://media.istockphoto.com/id/2226385991/photo/happy-group-of-students-studying-together-at-the-library.jpg?s=612x612&w=is&k=20&c=v4-JmzKhLKuc_2bCniD6WLDihY1ClFfGaWsHWzZFd2I=" alt="students learning">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, itaque.</p>
+        </article>
+        <article class="Services-article">
+            <h3>One-On-One Sessions</h3>
+            <img src="https://media.istockphoto.com/id/2226385991/photo/happy-group-of-students-studying-together-at-the-library.jpg?s=612x612&w=is&k=20&c=v4-JmzKhLKuc_2bCniD6WLDihY1ClFfGaWsHWzZFd2I=" alt="students learning">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, itaque.</p>
+        </article>
+        </div>
+        
+    </section>
+
+    <!--CONTACT SECTION-->
+    <section class="contact-section" id="contact">
+        <h2>Book a Session</h2>
+        <form action="submit">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="fullName" placeholder="Enter your name" autocomplete="name" required>
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" autocomplete="email" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone-number" id="phone" autocomplete="tel" required>
+            <label for="message">Type your message</label>
+            <textarea name="message" id="message" rows="6" minlength="20" maxlength="150" placeholder="Type your message" required></textarea>
+            <button type="submit">Book Session Now</button>
+        </form>
+    </section>
+
+    <!--FOOTER SECTION-->
+    <section class="footer">
+        <footer>&copy;All Rights Reserved ZayneTutor 2026.</footer>
+    </section>
+</body>
+</html>

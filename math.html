@@ -1,0 +1,185 @@
+import html
+from weasyprint import HTML
+
+html_content = """
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @page {
+        size: A4;
+        margin: 15mm 15mm;
+        background-color: #f7f9fc;
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        font-size: 11pt;
+    }
+    .header {
+        background-color: #1a365d; /* Navy blue */
+        color: white;
+        padding: 15px;
+        text-align: center;
+        margin: -15mm -15mm 20px -15mm;
+        border-bottom: 4px solid #f6ad55;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 20pt;
+        text-transform: uppercase;
+    }
+    .header p {
+        margin: 5px 0 0 0;
+        font-size: 11pt;
+    }
+    h2 {
+        color: #1a365d;
+        border-left: 5px solid #f6ad55;
+        padding-left: 10px;
+        font-size: 15pt;
+        margin-top: 25px;
+        page-break-after: avoid;
+    }
+    h3 {
+        color: #2b6cb0;
+        font-size: 12pt;
+        page-break-after: avoid;
+    }
+    p, ul {
+        margin-bottom: 15px;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background-color: white;
+    }
+    th, td {
+        border: 1px solid #cbd5e0;
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #edf2f7;
+        color: #1a365d;
+        font-weight: bold;
+    }
+    .math {
+        font-family: 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: bold;
+        color: #2c5282;
+    }
+    .proof-box {
+        background-color: white;
+        border: 1px solid #cbd5e0;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+    .footer {
+        text-align: center;
+        font-size: 9pt;
+        color: #718096;
+        margin-top: 30px;
+        border-top: 1px solid #cbd5e0;
+        padding-top: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Triangle Congruency Study Guide</h1>
+        <p>Grade 9 Mathematics (CAPS) &bull; ZayneTutor Resources</p>
+    </div>
+
+    <h2>1. The Axioms of Congruency (<span class="math">&cong;</span>)</h2>
+    <p>Congruent triangles are identical in both shape and size. All corresponding sides and interior angles are exactly equal. The order of vertices in the congruency statement dictates the matching pairs. If <span class="math">&Delta;ABC &cong; &Delta;XYZ</span>, then mathematically <span class="math">&ang;A = &ang;X</span> and <span class="math">AB = XY</span>.</p>
+
+    <h2>2. The Four Minimum Conditions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Condition</th>
+                <th>Abbreviation</th>
+                <th>Requirements</th>
+                <th>CAPS Reason</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Side-Side-Side</strong></td>
+                <td>SSS</td>
+                <td>All three corresponding pairs of sides are equal in length.</td>
+                <td>SSS</td>
+            </tr>
+            <tr>
+                <td><strong>Side-Angle-Side</strong></td>
+                <td>SAS</td>
+                <td>Two corresponding sides and the <strong>included angle</strong> are equal.</td>
+                <td>SAS</td>
+            </tr>
+            <tr>
+                <td><strong>Angle-Angle-Side</strong></td>
+                <td>AAS</td>
+                <td>Two corresponding angles and one corresponding side are equal.</td>
+                <td><span class="math">&ang;&ang;S</span></td>
+            </tr>
+            <tr>
+                <td><strong>Right-Hypotenuse-Side</strong></td>
+                <td>RHS</td>
+                <td>A right angle (90&deg;), the hypotenuse, and one other side are equal.</td>
+                <td>RHS</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Non-Congruency Traps to Avoid</h2>
+    <ul>
+        <li><strong>AAA (Angle-Angle-Angle):</strong> This proves Similarity (<span class="math">|||</span>), not congruency. The triangles have identical proportions but can be different sizes.</li>
+        <li><strong>SSA (Side-Side-Angle):</strong> Having two equal sides and a non-included angle is insufficient to prove congruency unless the angle is exactly 90&deg;.</li>
+    </ul>
+
+    <h2>4. Structuring a Formal CAPS Proof</h2>
+    <p>A valid Grade 9 proof requires declaring the two triangles being analyzed, making three statements of equality with an acceptable geometric reason in brackets, and writing a concluding statement.</p>
+
+    <div class="proof-box">
+        <h3>Worked Example 1: SAS</h3>
+        <p><strong>Given:</strong> In quadrilateral <span class="math">ABCD</span>, diagonal <span class="math">AC</span> bisects <span class="math">&ang;A</span>, and side <span class="math">AB = AD</span>.</p>
+        <p><strong>Prove:</strong> <span class="math">&Delta;ABC &cong; &Delta;ADC</span></p>
+        <p><strong>Proof:</strong><br>
+        In <span class="math">&Delta;ABC</span> and <span class="math">&Delta;ADC</span>:<br>
+        1. <span class="math">AB = AD</span> (Given)<br>
+        2. <span class="math">&ang;A<sub>1</sub> = &ang;A<sub>2</sub></span> (Given: <span class="math">AC</span> bisects <span class="math">&ang;A</span>)<br>
+        3. <span class="math">AC = AC</span> (Common side)<br>
+        &there4; <span class="math">&Delta;ABC &cong; &Delta;ADC</span> (SAS)</p>
+    </div>
+
+    <div class="proof-box" style="page-break-inside: avoid;">
+        <h3>Worked Example 2: RHS</h3>
+        <p><strong>Given:</strong> <span class="math">PQ &perp; QR</span> and <span class="math">TS &perp; SR</span>. Line <span class="math">PR = TR</span> and <span class="math">QR = SR</span>.</p>
+        <p><strong>Prove:</strong> <span class="math">&Delta;PQR &cong; &Delta;TSR</span></p>
+        <p><strong>Proof:</strong><br>
+        In <span class="math">&Delta;PQR</span> and <span class="math">&Delta;TSR</span>:<br>
+        1. <span class="math">&ang;Q = &ang;S = 90&deg;</span> (Given: <span class="math">PQ &perp; QR</span> and <span class="math">TS &perp; SR</span>)<br>
+        2. <span class="math">PR = TR</span> (Given: Hypotenuses are equal)<br>
+        3. <span class="math">QR = SR</span> (Given)<br>
+        &there4; <span class="math">&Delta;PQR &cong; &Delta;TSR</span> (RHS)</p>
+    </div>
+
+    <div class="footer">
+        Prepared for ZayneTutor Educational Resources &bull; CAPS Aligned
+    </div>
+</body>
+</html>
